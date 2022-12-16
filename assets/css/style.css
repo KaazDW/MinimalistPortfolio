@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/*
+font-family: 'Comfortaa', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  list-style: none;
+}
+* a {
+  text-decoration: none;
+  color: white;
+}
+
+:root {
+  --color-element: #2c2c2c;
+  --color-background: #111;
+  --color-grey: rgb(92, 92, 92);
+  --color-lightgrey: rgb(50, 50, 50);
+}
+
+body {
+  background-color: var(--color-background);
+  font-family: "Poppins", sans-serif;
+  width: 60vw;
+  height: 100vh;
+  margin: auto;
+  letter-spacing: 0.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main {
+  border: 1px solid var(--color-lightgrey);
+  border-radius: 10px;
+  padding: 5px;
+}
+body main header {
+  user-select: none;
+}
+body main header ul {
+  display: flex;
+}
+body main header ul li {
+  margin-top: 10px;
+}
+body main header ul a {
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+body main header ul a:hover {
+  background-color: var(--color-lightgrey);
+  cursor: pointer;
+}
+body main section#index {
+  height: 500px;
+  width: 500px;
+  text-align: center;
+  margin-top: 35px;
+}
+body main section#index img {
+  height: 100px;
+  width: 100px;
+  border-radius: 50px;
+}
+body main section#index h3 {
+  color: var(--color-grey);
+  margin-top: -5px;
+}
+body main section#index h4 {
+  margin-top: 30px;
+}
+body main section#index p {
+  text-align: left;
+  margin: 15px 30px;
+}
+body main section#index p #age {
+  background-color: var(--color-lightgrey);
+  padding: 1px 6px;
+  margin: 0 6px;
+  border-radius: 3px;
+  border: 1px solid var(--color-grey);
+}
+body main section#project {
+  height: 100px;
+  width: 100px;
+}
+
+@keyframes openProject {
+  from {
+    height: 500px;
+    width: 500px;
+    opacity: 0;
+  }
+  to {
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+  }
+}
+@keyframes openIndex {
+  from {
+    height: 100px;
+    width: 100px;
+    opacity: 0;
+  }
+  to {
+    height: 500px;
+    width: 500px;
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
