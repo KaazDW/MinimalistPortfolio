@@ -37,6 +37,7 @@ body main {
   border: 1px solid var(--color-lightgrey);
   border-radius: 10px;
   padding: 5px;
+  margin-top: -150px;
 }
 body main header {
   user-select: none;
@@ -58,10 +59,11 @@ body main header ul a:hover {
   cursor: pointer;
 }
 body main section#index {
-  height: 500px;
   width: 500px;
   text-align: center;
+  animation: openIndex 1s;
   margin-top: 35px;
+  padding-bottom: 100px;
 }
 body main section#index img {
   height: 100px;
@@ -80,38 +82,74 @@ body main section#index p {
   margin: 15px 30px;
 }
 body main section#index p #age {
-  background-color: var(--color-lightgrey);
   padding: 1px 6px;
   margin: 0 6px;
   border-radius: 3px;
   border: 1px solid var(--color-grey);
+  cursor: crosshair;
+}
+body main section#index p #day {
+  position: absolute;
+  opacity: 0;
+  margin-top: -40px;
+  margin-left: -100px;
+  background-color: rgb(53, 53, 53);
+  padding: 2px 5px;
+  border: 1px solid var(--color-grey);
+  border-radius: 5px;
+  transition: opacity ease 1s;
+}
+body main section#index p #age:hover ~ #day {
+  opacity: 1;
+  animation: openDay 0.3s;
 }
 body main section#project {
-  height: 100px;
-  width: 100px;
+  width: 600px;
+  animation: openProject 1s;
+}
+body main section#project div.container {
+  display: flex;
+  width: 90%;
+  margin: 30px auto;
+  white-space: nowrap;
+}
+body main section#project div.container div.card {
+  height: 300px;
+  margin: 0 5px;
+  border-radius: 5px;
+  border: 1px solid var(--color-grey);
+  width: 33%;
+  transition: 0.5s;
+}
+body main section#project div.container div.card:nth-child(2) {
+  width: 65%;
 }
 
 @keyframes openProject {
   from {
-    height: 500px;
     width: 500px;
     opacity: 0;
   }
   to {
-    height: 100px;
-    width: 100px;
+    width: 600px;
     opacity: 1;
   }
 }
 @keyframes openIndex {
   from {
-    height: 100px;
-    width: 100px;
+    width: 600px;
     opacity: 0;
   }
   to {
-    height: 500px;
     width: 500px;
+    opacity: 1;
+  }
+}
+@keyframes openDay {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
   }
 }

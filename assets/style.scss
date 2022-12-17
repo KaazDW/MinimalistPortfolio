@@ -36,6 +36,7 @@ body{
         border: 1px solid var(--color-lightgrey);
         border-radius: 10px;
         padding: 5px;
+        margin-top: -150px;
         header{
             user-select: none;
             ul{
@@ -57,11 +58,11 @@ body{
         }
         section#index{
             // background-color: green;
-            height: 500px;
             width: 500px;
             text-align: center;
-            // animation: openIndex 1s;
+            animation: openIndex 1s;
             margin-top: 35px;
+            padding-bottom: 100px;
             img{
                 height: 100px;
                 width: 100px;
@@ -78,43 +79,89 @@ body{
                 text-align: left;
                 margin: 15px 30px;
                 #age{
-                    background-color: var(--color-lightgrey);
+                    // background-color: var(--color-lightgrey);
                     padding: 1px 6px;
                     margin: 0 6px;
                     border-radius: 3px;
-                    border: 1px solid var(--color-grey)
+                    border: 1px solid var(--color-grey);
+                    cursor: crosshair;
+
+                }                  
+                #day{
+                    // visibility: hidden;
+                    position: absolute;
+                    opacity: 0;
+                    margin-top: -40px;
+                    margin-left: -100px;
+                    background-color: rgb(53, 53, 53);
+                    // backdrop-filter: blur(15px);
+                    padding: 2px 5px;
+                    border: 1px solid var(--color-grey);
+                    border-radius: 5px;
+                    // transition: .5s ease-out
+                    transition: opacity ease 1s;
+
+                }
+
+                #age:hover ~ #day{
+                    // visibility: visible;
+                    opacity: 1;
+                    animation: openDay .3s;
+
                 }
             }
         }
         section#project{
-            height: 100px;
-            width: 100px;
-            // animation: openProject 1s;
+            // height: 100px;
+            width: 600px;
+            animation: openProject 1s;
+            div.container{
+                display: flex;
+                width: 90%;
+                margin: 30px auto;
+                white-space: nowrap;
+                div.card{
+                    height: 300px;
+                    margin: 0 5px;
+                    border-radius: 5px;
+                    border: 1px solid var(--color-grey);
+                    width: 33%;
+                    transition: .5s;
+                }
+                div.card:nth-child(2){
+                    // background-color: red;
+                    width: 65%;
+                }
+            }
         }
 
     }
 }
 @keyframes openProject{
     from{
-        height: 500px;
         width: 500px;
         opacity: 0;
     }
     to{
-        height: 100px;
-        width: 100px;
+        width: 600px;
         opacity: 1;
     }
 }
 @keyframes openIndex{
     from{
-        height: 100px;
-        width: 100px;
+        width: 600px;
         opacity: 0;
     }    
     to{
-        height: 500px;
         width: 500px;
+        opacity: 1;
+    }
+}
+@keyframes openDay {
+    from{
+        opacity: 0;
+    }
+    to{
         opacity: 1;
     }
 }
