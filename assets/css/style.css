@@ -9,6 +9,7 @@ font-family: 'Roboto', sans-serif;
   padding: 0;
   color: white;
   list-style: none;
+  user-select: none;
 }
 * a {
   text-decoration: none;
@@ -63,7 +64,7 @@ body main section#index {
   text-align: center;
   animation: openIndex 1s;
   margin-top: 35px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
 }
 body main section#index img {
   height: 100px;
@@ -79,7 +80,7 @@ body main section#index h4 {
 }
 body main section#index p {
   text-align: left;
-  margin: 15px 30px;
+  margin: 25px 30px;
 }
 body main section#index p #age {
   padding: 1px 6px;
@@ -103,6 +104,23 @@ body main section#index p #age:hover ~ #day {
   opacity: 1;
   animation: openDay 0.3s;
 }
+body main section#index div a {
+  border: 1px solid transparent;
+  padding-top: 70px;
+  transition: 0.4s;
+  margin: 0 15px;
+}
+body main section#index div a img {
+  border-radius: 0px;
+  margin: 15px;
+  height: 50px;
+  width: 50px;
+}
+body main section#index div a:hover {
+  border-top: 1px solid var(--color-lightgrey);
+  border-bottom: 1px solid var(--color-lightgrey);
+  border-radius: 25px;
+}
 body main section#project {
   width: 600px;
   animation: openProject 1s;
@@ -113,13 +131,53 @@ body main section#project div.container {
   margin: 30px auto;
   white-space: nowrap;
 }
+body main section#project div.container div#card1 div p {
+  height: 43%;
+}
 body main section#project div.container div.card {
-  height: 300px;
+  height: 450px;
+  width: 33%;
   margin: 0 5px;
   border-radius: 5px;
-  border: 1px solid var(--color-grey);
-  width: 33%;
+  border: 1px solid var(--color-lightgrey);
   transition: 0.5s;
+  flex-direction: column;
+  align-items: center;
+}
+body main section#project div.container div.card img {
+  height: 100px;
+  border-radius: 4px 4px 0 0;
+  object-fit: cover;
+  width: 100%;
+}
+body main section#project div.container div.card h3 {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  margin: auto;
+}
+body main section#project div.container div.card div {
+  width: 100%;
+  height: 100%;
+  animation: openDay 1s;
+}
+body main section#project div.container div.card div p {
+  margin: 10px 10px;
+  height: 48%;
+  font-size: 14px;
+  color: rgb(165, 165, 165);
+  white-space: normal;
+}
+body main section#project div.container div.card div footer {
+  text-align: center;
+}
+body main section#project div.container div.card div footer div {
+  margin-bottom: 5px;
+}
+body main section#project div.container div.card div footer div span {
+  border: 1px solid var(--color-lightgrey);
+  padding: 1px 3px;
+  line-height: 30px;
 }
 body main section#project div.container div.card:nth-child(2) {
   width: 65%;
@@ -128,28 +186,32 @@ body main section#project div.container div.card:nth-child(2) {
 @keyframes openProject {
   from {
     width: 500px;
+    height: 500px;
     opacity: 0;
   }
   to {
     width: 600px;
+    height: 482px;
     opacity: 1;
   }
 }
 @keyframes openIndex {
   from {
     width: 600px;
+    height: 470px;
     opacity: 0;
   }
   to {
     width: 500px;
+    height: 482px;
     opacity: 1;
   }
 }
 @keyframes openDay {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }

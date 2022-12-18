@@ -11,6 +11,7 @@ font-family: 'Roboto', sans-serif;
     color:white;
     a{text-decoration: none; color: white;}
     list-style: none;
+    user-select: none;
 }
 
 :root{
@@ -62,7 +63,7 @@ body{
             text-align: center;
             animation: openIndex 1s;
             margin-top: 35px;
-            padding-bottom: 100px;
+            padding-bottom: 10px;
             img{
                 height: 100px;
                 width: 100px;
@@ -77,9 +78,8 @@ body{
             }
             p{
                 text-align: left;
-                margin: 15px 30px;
+                margin: 25px 30px;
                 #age{
-                    // background-color: var(--color-lightgrey);
                     padding: 1px 6px;
                     margin: 0 6px;
                     border-radius: 3px;
@@ -110,6 +110,26 @@ body{
 
                 }
             }
+            div{
+                a{
+                    border: 1px solid transparent;
+                    padding-top: 70px;
+                    transition: .4s;
+                    margin: 0 15px;
+                    img{
+                    border-radius: 0px;
+                    margin: 15px;
+                    height: 50px;
+                    width: 50px;
+                    }
+                }
+                a:hover{
+                    // border: 1px solid var(--color-lightgrey);
+                    border-top: 1px solid var(--color-lightgrey);
+                    border-bottom: 1px solid var(--color-lightgrey);
+                    border-radius: 25px;
+                }
+            }
         }
         section#project{
             // height: 100px;
@@ -120,16 +140,61 @@ body{
                 width: 90%;
                 margin: 30px auto;
                 white-space: nowrap;
+                div#card1{ //style for cards with 2 lines of technologies
+                    div{
+                        p{
+                            height: 43%;
+                        }
+                    }
+                }
                 div.card{
-                    height: 300px;
+                    height: 450px;
+                    width: 33%;
                     margin: 0 5px;
                     border-radius: 5px;
-                    border: 1px solid var(--color-grey);
-                    width: 33%;
+                    border: 1px solid var(--color-lightgrey);
                     transition: .5s;
+                    flex-direction: column;
+                    align-items: center;
+                    img{
+                        height: 100px;
+                        border-radius: 4px 4px 0 0;;
+                        object-fit: cover;
+                        width: 100%;
+                    }
+                    h3{
+                        text-align: center;
+                        text-transform: uppercase;
+                        transition: .5s ease-in-out;
+                        margin: auto;
+                    }
+                    div{
+                        width: 100%;
+                        height: 100%;
+                        animation: openDay 1s;
+                        p{
+                            margin: 10px 10px;
+                            height: 48%;
+                            // width: 100%;
+                            font-size: 14px;
+                            color: rgb(165, 165, 165);
+                            // word-break: normal;
+                            white-space: normal;
+                        }  
+                        footer {
+                            text-align: center;
+                            div{
+                                margin-bottom: 5px;
+                                span{
+                                    border: 1px solid var(--color-lightgrey);
+                                    padding: 1px 3px;
+                                    line-height: 30px;
+                                }
+                            }
+                        }
+                    }
                 }
-                div.card:nth-child(2){
-                    // background-color: red;
+                div.card:nth-child(2){ //for the first open card
                     width: 65%;
                 }
             }
@@ -140,28 +205,35 @@ body{
 @keyframes openProject{
     from{
         width: 500px;
+        height: 500px;
         opacity: 0;
     }
     to{
         width: 600px;
+        height: 482px;
         opacity: 1;
     }
 }
 @keyframes openIndex{
     from{
         width: 600px;
+        height: 470px;
         opacity: 0;
     }    
     to{
         width: 500px;
+        height: 482px;
         opacity: 1;
     }
 }
 @keyframes openDay {
-    from{
+    0%{
         opacity: 0;
     }
-    to{
+    // 30%{
+    //     opacity: 0;
+    // }
+    100%{
         opacity: 1;
     }
 }
