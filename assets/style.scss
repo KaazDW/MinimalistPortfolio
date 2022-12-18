@@ -40,13 +40,14 @@ body{
         margin-top: -150px;
         header{
             user-select: none;
+            margin-bottom: 25px;
             ul{
                 display: flex;
                 li{
                     margin-top: 10px
                 }
                 a{
-                    margin: 5px;
+                    margin: 3px;
                     padding: 8px 12px;
                     border-radius: 5px;
                     transition: .3s;
@@ -61,7 +62,7 @@ body{
             // background-color: green;
             width: 500px;
             text-align: center;
-            animation: openIndex 1s;
+            animation: openIndex 1.3s;
             margin-top: 35px;
             padding-bottom: 10px;
             img{
@@ -85,7 +86,6 @@ body{
                     border-radius: 3px;
                     border: 1px solid var(--color-grey);
                     cursor: crosshair;
-
                 }                  
                 #day{
                     // visibility: hidden;
@@ -111,14 +111,17 @@ body{
                 }
             }
             div{
+                margin-top: 35px;
+                margin-bottom: 15px;
                 a{
                     border: 1px solid transparent;
-                    padding-top: 70px;
                     transition: .4s;
-                    margin: 0 15px;
+                    margin: 0 5px;
+                    padding: 0 10px;
+                    padding-top: 55px;
                     img{
                     border-radius: 0px;
-                    margin: 15px;
+                    margin: 5px;
                     height: 50px;
                     width: 50px;
                     }
@@ -134,11 +137,20 @@ body{
         section#project{
             // height: 100px;
             width: 600px;
-            animation: openProject 1s;
+            animation: openProject 1.3s;
+            padding-bottom: 25px;
+            p{
+                margin-top: 15px;
+                margin-left: 38px;
+                color:rgb(167, 167, 167);
+            }
+            p.bottom-text{
+                animation: openT 3s;
+            }
             div.container{
                 display: flex;
                 width: 90%;
-                margin: 30px auto;
+                margin: 5px auto;
                 white-space: nowrap;
                 div#card1{ //style for cards with 2 lines of technologies
                     div{
@@ -193,11 +205,15 @@ body{
                             }
                         }
                     }
+
                 }
                 div.card:nth-child(2){ //for the first open card
                     width: 65%;
                 }
+
             }
+
+
         }
 
     }
@@ -205,34 +221,42 @@ body{
 @keyframes openProject{
     from{
         width: 500px;
-        height: 500px;
+        height: 482px;
         opacity: 0;
     }
     to{
         width: 600px;
-        height: 482px;
+        height: 548px;
         opacity: 1;
     }
 }
 @keyframes openIndex{
     from{
         width: 600px;
-        height: 470px;
+        height: 548px;
         opacity: 0;
     }    
     to{
         width: 500px;
-        height: 482px;
+        height: 487px;
         opacity: 1;
     }
 }
 @keyframes openDay {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes openT {
     0%{
         opacity: 0;
     }
-    // 30%{
-    //     opacity: 0;
-    // }
+    30%{
+        opacity: 0;
+    }
     100%{
         opacity: 1;
     }

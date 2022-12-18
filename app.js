@@ -37,7 +37,7 @@ document.getElementById('day').innerHTML = dayvalue + ' days'
 
 
 
-document.getElementById('index').style.display = "none"
+document.getElementById('project').style.display = "none"
 document.getElementById('card-content1').style.display = "none"
 document.getElementById('card-content2').style.display = 'block'
 document.getElementById('card-content3').style.display = 'none'
