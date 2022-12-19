@@ -43,9 +43,16 @@ document.getElementById('card-content1').style.display = "none"
 document.getElementById('card-content2').style.display = 'block'
 document.getElementById('card-content3').style.display = 'none'
 
+document.getElementById('minimized1').style.display = 'flex'
+document.getElementById('minimized2').style.display = 'none'
+document.getElementById('minimized3').style.display = 'flex'
+
 function projectdisplay(x){
     //x = the card clicked on
     if(x === 1){
+        document.getElementById('minimized1').style.display = 'none'
+        document.getElementById('minimized2').style.display = 'flex'
+        document.getElementById('minimized3').style.display = 'flex'
         //size redefinition
         document.getElementById('card1').style.width = '70%'
         document.getElementById('card2').style.width = '33%'
@@ -59,6 +66,10 @@ function projectdisplay(x){
         }, 200);
     }
     if(x === 2){
+        document.getElementById('minimized1').style.display = 'flex'
+        document.getElementById('minimized2').style.display = 'none'
+        document.getElementById('minimized3').style.display = 'flex'
+
         document.getElementById('card1').style.width = '33%'
         document.getElementById('card2').style.width = '70%'
         document.getElementById('card3').style.width = '33%'
@@ -69,6 +80,10 @@ function projectdisplay(x){
         }, 200);
     }
     if(x === 3){
+        document.getElementById('minimized1').style.display = 'flex'
+        document.getElementById('minimized2').style.display = 'flex'
+        document.getElementById('minimized3').style.display = 'none'
+
         document.getElementById('card1').style.width = '33%'
         document.getElementById('card2').style.width = '33%'
         document.getElementById('card3').style.width = '70%'
