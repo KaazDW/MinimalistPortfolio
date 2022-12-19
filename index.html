@@ -12,7 +12,7 @@
 
 </head>
 <body>
-    <main>
+    <main id="mainmobile">
         <header>
             <ul>
                 <li><a onclick="index()">HOME</a></li>
@@ -42,63 +42,124 @@
             </div>
         </section>
         <section id="project">
-            <p>Some recent project i made</p>
-            <div class="container">
-                <div id="card1" class="card" onclick="projectdisplay(1)">
-                    <img src="assets/img/pp.PNG">
-                    <h3 id="title1">Tuniv</h3>
-                    <div id="card-content1">
-                        <!-- FIRST CARD CONTENT-->
-                        <p>Tuniv is a project I built with 2 classmates during our second year of higher education in computer science. The goal is to develop a web-app to manage sports tournaments by generating pools of matches...</p>
-                        <footer>
-                            <div>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>PHP</span>
-                                <br>
-                                <span>JS</span>
-                                <span>MySQL</span>
-                            </div>
-                            <a href="">See the Github Repo</a>
-                        </footer>
+            <section class="desktop">
+                <p>Some recent project i made</p>
+                <div class="container">
+                    <div id="card1" class="card" onclick="projectdisplay(1)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title1">Tuniv</h3>
+                        <div id="card-content1">
+                            <!-- FIRST CARD CONTENT-->
+                            <p>Tuniv is a project I built with 2 classmates during our second year of higher education in computer science. The goal is to develop a web-app to manage sports tournaments by generating pools of matches...</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>PHP</span>
+                                    <br>
+                                    <span>JS</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div id="card2" class="card" onclick="projectdisplay(2)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title2">portfolio</h3>
+                        <div id="card-content2">
+                            <!-- SECOND CARD CONTENT-->
+                            <p>I started this project in October 2021 during class, but never satisfied with myself I built many different versions before posting it.
+                            <br>You are actually on this short project, it's trying to be a simple & modern web page use for presenting myself.</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>SCSS</span>
+                                    <span>JS</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div id="card3" class="card" onclick="projectdisplay(3)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title3">Lorem.</h3>
+                        <div id="card-content3">
+                            <!-- THIRD CARD CONTENT -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eveniet sequi nisi dolorum, quos dolor iusto! Iure praesentium voluptas blanditiis! Praesentium deserunt dignissimos excepturi, voluptate labore ipsam laboriosam facilis ad!</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
                     </div>
                 </div>
-                <div id="card2" class="card" onclick="projectdisplay(2)">
-                    <img src="assets/img/pp.PNG">
-                    <h3 id="title2">portfolio</h3>
-                    <div id="card-content2">
-                        <!-- SECOND CARD CONTENT-->
-                        <p>I started this project in October 2021 during class, but never satisfied with myself I built many different versions before posting it.
-                        <br>You are actually on this short project, it's trying to be a simple & modern web page use for presenting myself.</p>
-                        <footer>
-                            <div>
-                                <span>HTML</span>
-                                <span>SCSS</span>
-                                <span>JS</span>
-                            </div>
-                            <a href="">See the Github Repo</a>
-                        </footer>
+                <p class="bottom-text">If you want to see more of my work, feel free to take a look on my <a href="https://github.com/kaazdw" target="_blank">github profile</a> or contact me.</p>
+            </section>
+            <section class="mobile">
+                <p>Some recent project i made</p>
+                <div class="container">
+                    <div id="card1" class="card" onclick="projectdisplay(1)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title1">Tuniv</h3>
+                        <div id="card-content1">
+                            <!-- FIRST CARD CONTENT-->
+                            <p>Tuniv is a project I built with 2 classmates during our second year of higher education in computer science. The goal is to develop a web-app to manage sports tournaments by generating pools of matches...</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>PHP</span>
+                                    <br>
+                                    <span>JS</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div id="card2" class="card" onclick="projectdisplay(2)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title2">portfolio</h3>
+                        <div id="card-content2">
+                            <!-- SECOND CARD CONTENT-->
+                            <p>I started this project in October 2021 during class, but never satisfied with myself I built many different versions before posting it.
+                            <br>You are actually on this short project, it's trying to be a simple & modern web page use for presenting myself.</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>SCSS</span>
+                                    <span>JS</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
+                    </div>
+                    <div id="card3" class="card" onclick="projectdisplay(3)">
+                        <img src="assets/img/pp.PNG">
+                        <h3 id="title3">Lorem.</h3>
+                        <div id="card-content3">
+                            <!-- THIRD CARD CONTENT -->
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eveniet sequi nisi dolorum, quos dolor iusto! Iure praesentium voluptas blanditiis! Praesentium deserunt dignissimos excepturi, voluptate labore ipsam laboriosam facilis ad!</p>
+                            <footer>
+                                <div>
+                                    <span>HTML</span>
+                                    <span>CSS</span>
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                </div>
+                                <a href="">See the Github Repo</a>
+                            </footer>
+                        </div>
                     </div>
                 </div>
-                <div id="card3" class="card" onclick="projectdisplay(3)">
-                    <img src="assets/img/pp.PNG">
-                    <h3 id="title3">Lorem.</h3>
-                    <div id="card-content3">
-                        <!-- THIRD CARD CONTENT -->
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis eveniet sequi nisi dolorum, quos dolor iusto! Iure praesentium voluptas blanditiis! Praesentium deserunt dignissimos excepturi, voluptate labore ipsam laboriosam facilis ad!</p>
-                        <footer>
-                            <div>
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>PHP</span>
-                                <span>MySQL</span>
-                            </div>
-                            <a href="">See the Github Repo</a>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-            <p class="bottom-text">If you want to see more of my work, feel free to take a look on my <a href="https://github.com/kaazdw" target="_blank">github profile</a> or contact me.</p>
+                <p class="bottom-text">If you want to see more of my work, feel free to take a look on my <a href="https://github.com/kaazdw" target="_blank">github profile</a> or contact me.</p>
+            </section>
         </section>
     </main>
 </body>

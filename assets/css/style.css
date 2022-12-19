@@ -127,29 +127,29 @@ body main section#index div a:hover {
   border-bottom: 1px solid var(--color-lightgrey);
   border-radius: 25px;
 }
-body main section#project {
+body main section#project section.desktop {
   width: 600px;
   animation: openProject 1.3s;
   padding-bottom: 25px;
 }
-body main section#project p {
+body main section#project section.desktop p {
   margin-top: 15px;
   margin-left: 38px;
   color: rgb(167, 167, 167);
 }
-body main section#project p.bottom-text {
+body main section#project section.desktop p.bottom-text {
   animation: openT 3s;
 }
-body main section#project div.container {
+body main section#project section.desktop div.container {
   display: flex;
   width: 90%;
   margin: 5px auto;
   white-space: nowrap;
 }
-body main section#project div.container div#card1 div p {
+body main section#project section.desktop div.container div#card1 div p {
   height: 43%;
 }
-body main section#project div.container div.card {
+body main section#project section.desktop div.container div.card {
   height: 450px;
   width: 33%;
   margin: 0 5px;
@@ -159,43 +159,46 @@ body main section#project div.container div.card {
   flex-direction: column;
   align-items: center;
 }
-body main section#project div.container div.card img {
+body main section#project section.desktop div.container div.card img {
   height: 100px;
   border-radius: 4px 4px 0 0;
   object-fit: cover;
   width: 100%;
 }
-body main section#project div.container div.card h3 {
+body main section#project section.desktop div.container div.card h3 {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s ease-in-out;
   margin: auto;
 }
-body main section#project div.container div.card div {
+body main section#project section.desktop div.container div.card div {
   width: 100%;
   height: 100%;
   animation: openDay 1s;
 }
-body main section#project div.container div.card div p {
+body main section#project section.desktop div.container div.card div p {
   margin: 10px 10px;
   height: 48%;
   font-size: 14px;
   color: rgb(165, 165, 165);
   white-space: normal;
 }
-body main section#project div.container div.card div footer {
+body main section#project section.desktop div.container div.card div footer {
   text-align: center;
 }
-body main section#project div.container div.card div footer div {
+body main section#project section.desktop div.container div.card div footer div {
   margin-bottom: 5px;
 }
-body main section#project div.container div.card div footer div span {
+body main section#project section.desktop div.container div.card div footer div span {
   border: 1px solid var(--color-lightgrey);
   padding: 1px 3px;
   line-height: 30px;
 }
-body main section#project div.container div.card:nth-child(2) {
+body main section#project section.desktop div.container div.card:nth-child(2) {
   width: 65%;
+}
+body main section.mobile {
+  display: none;
 }
 
 @keyframes openProject {
@@ -239,6 +242,114 @@ body main section#project div.container div.card:nth-child(2) {
   }
   100% {
     opacity: 1;
+  }
+}
+@media (max-width: 630px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    align-items: flex-start;
+    margin-top: -35px;
+  }
+  body main {
+    width: 95vw;
+    margin-top: 50px;
+    margin-left: 25px;
+  }
+  body main header ul {
+    justify-content: space-between;
+  }
+  body main section#index {
+    animation: none;
+    animation: openDay 0.5s;
+    width: 100vw;
+  }
+  body main section#index p {
+    margin: 20px auto;
+    width: 90vw;
+    white-space: break-spaces;
+  }
+  body main section#index div.link {
+    width: 70vw;
+    margin: 55px auto;
+    line-height: 150px;
+  }
+  body main section#index div.link a {
+    margin: 25px;
+  }
+  body main section#project {
+    margin: auto;
+    width: 100vw;
+  }
+  body main section#project section.desktop {
+    display: none;
+  }
+  body main section#project section.mobile {
+    display: block;
+    animation: none;
+    padding-bottom: 25px;
+  }
+  body main section#project section.mobile p {
+    margin-top: 15px;
+    margin-left: 8px;
+    color: rgb(167, 167, 167);
+  }
+  body main section#project section.mobile p.bottom-text {
+    animation: openT 3s;
+    width: 80vw;
+    margin: 15px auto;
+  }
+  body main section#project section.mobile div.container {
+    display: flex;
+    flex-direction: column;
+  }
+  body main section#project section.mobile div.container div#card1 div p {
+    height: 33%;
+  }
+  body main section#project section.mobile div.container div.card {
+    height: 400px;
+    width: 92vw;
+    margin: 5px 5px;
+    border-radius: 5px;
+    border: 1px solid var(--color-lightgrey);
+    transition: 0.5s;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main section#project section.mobile div.container div.card img {
+    height: 100px;
+    border-radius: 4px 4px 0 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  body main section#project section.mobile div.container div.card h3 {
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s ease-in-out;
+    margin: auto;
+  }
+  body main section#project section.mobile div.container div.card div {
+    width: 100%;
+    height: 100%;
+    animation: openDay 1s;
+  }
+  body main section#project section.mobile div.container div.card div p {
+    margin: 10px 10px;
+    height: 38%;
+    font-size: 14px;
+    color: rgb(165, 165, 165);
+    white-space: normal;
+  }
+  body main section#project section.mobile div.container div.card div footer {
+    text-align: center;
+  }
+  body main section#project section.mobile div.container div.card div footer div {
+    margin-bottom: 5px;
+  }
+  body main section#project section.mobile div.container div.card div footer div span {
+    border: 1px solid var(--color-lightgrey);
+    padding: 1px 3px;
+    line-height: 30px;
   }
 }
 
