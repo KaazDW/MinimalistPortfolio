@@ -1,3 +1,9 @@
+/*
+------ Built by KaazDW --------   
+------------12-2022------------
+-----All right reserved--------
+------github.com/kaazdw--------
+*/
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
 /*
 font-family: 'Comfortaa', cursive;
@@ -33,6 +39,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body .ptext {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 body main {
   border: 1px solid var(--color-lightgrey);
@@ -171,11 +182,16 @@ body main section#project section.desktop div.container div.card h3 {
   transition: 0.5s ease-in-out;
   margin: auto;
 }
+body main section#project section.desktop div.container div.card div#minimized1 {
+  margin-top: -10px;
+}
 body main section#project section.desktop div.container div.card div#minimized1, body main section#project section.desktop div.container div.card div#minimized2, body main section#project section.desktop div.container div.card div#minimized3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+}
+body main section#project section.desktop div.container div.card div#minimized1 p, body main section#project section.desktop div.container div.card div#minimized2 p, body main section#project section.desktop div.container div.card div#minimized3 p {
+  color: var(--color-lightgrey);
 }
 body main section#project section.desktop div.container div.card div {
   width: 100%;

@@ -1,3 +1,10 @@
+/*
+------ Built by KaazDW --------   
+------------12-2022------------
+-----All right reserved--------
+------github.com/kaazdw--------
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600;700&family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 /*
 font-family: 'Comfortaa', cursive;
@@ -13,15 +20,12 @@ font-family: 'Roboto', sans-serif;
     list-style: none;
     user-select: none;
 }
-
 :root{
     --color-element: #2c2c2c;
-    // --color-background: #0d1116;
     --color-background: #111;
     --color-grey: rgb(92, 92, 92);
     --color-lightgrey: rgb(50, 50, 50);
 }
-
 body{
     background-color: var(--color-background);
     font-family: 'Poppins', sans-serif;
@@ -32,8 +36,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    .ptext{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
     main{
-        // height: 100%;
         border: 1px solid var(--color-lightgrey);
         border-radius: 10px;
         padding: 5px;
@@ -59,7 +67,6 @@ body{
             }
         }
         section#index{
-            // background-color: green;
             width: 500px;
             text-align: center;
             animation: openIndex 1.3s;
@@ -88,7 +95,6 @@ body{
                     cursor: crosshair;
                 }                  
                 #day{
-                    // visibility: hidden;
                     position: absolute;
                     opacity: 0;
                     margin-top: -40px;
@@ -102,7 +108,6 @@ body{
                     transition: opacity ease 1s;
                 }
                 #age:hover ~ #day{
-                    // visibility: visible;
                     opacity: 1;
                     animation: openDay .3s;
                 }
@@ -124,7 +129,6 @@ body{
                     }
                 }
                 a:hover{
-                    // border: 1px solid var(--color-lightgrey);
                     border-top: 1px solid var(--color-lightgrey);
                     border-bottom: 1px solid var(--color-lightgrey);
                     border-radius: 25px;
@@ -133,7 +137,6 @@ body{
         }
         section#project{
             section.desktop{
-                // height: 100px;
                 width: 600px;
                 animation: openProject 1.3s;
                 padding-bottom: 25px;
@@ -178,11 +181,16 @@ body{
                             transition: .5s ease-in-out;
                             margin: auto;
                         }
+                        div#minimized1{
+                            margin-top: -10px;
+                        }
                         div#minimized1, div#minimized2, div#minimized3 {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            height: 100%;
+                            p{
+                                color: var(--color-lightgrey);
+                            }
                         }
                         div{
                             width: 100%;
@@ -210,7 +218,6 @@ body{
                                 }
                             }
                         }
-
                     }
                     div.card:nth-child(2){ //for the first open card
                         width: 65%;
@@ -221,7 +228,6 @@ body{
         section.mobile{
             display: none;
         }
-
     }
 }
 @keyframes openProject{
@@ -267,7 +273,6 @@ body{
         opacity: 1;
     }
 }
-
 
 @media (max-width: 630px) { 
     body{
