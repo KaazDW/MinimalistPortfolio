@@ -32,8 +32,6 @@ font-family: 'Roboto', sans-serif;
 body {
   background-color: var(--color-background);
   font-family: "Poppins", sans-serif;
-  width: 60vw;
-  height: 100vh;
   margin: auto;
   letter-spacing: 0.8px;
   display: flex;
@@ -49,7 +47,7 @@ body main {
   border: 1px solid var(--color-lightgrey);
   border-radius: 10px;
   padding: 5px;
-  margin-top: -150px;
+  margin-top: 75px;
 }
 body main header {
   user-select: none;
@@ -268,15 +266,12 @@ body main section.mobile {
 }
 @media (max-width: 630px) {
   body {
-    height: 100vh;
-    width: 100vw;
     align-items: flex-start;
     margin-top: -35px;
   }
   body main {
-    width: 95vw;
+    width: 90vw;
     margin-top: 50px;
-    margin-left: 25px;
   }
   body main header ul {
     justify-content: space-between;
@@ -284,11 +279,13 @@ body main section.mobile {
   body main section#index {
     animation: none;
     animation: openDay 0.5s;
-    width: 100vw;
+    width: 100%;
+    display: block;
   }
   body main section#index p {
     margin: 20px auto;
-    width: 90vw;
+    width: 100%;
+    text-align: center;
     white-space: break-spaces;
   }
   body main section#index div.link {
@@ -301,7 +298,7 @@ body main section.mobile {
   }
   body main section#project {
     margin: auto;
-    width: 100vw;
+    width: 100%;
   }
   body main section#project section.desktop {
     display: none;
@@ -330,7 +327,7 @@ body main section.mobile {
   }
   body main section#project section.mobile div.container div.card {
     height: 400px;
-    width: 92vw;
+    width: 96%;
     margin: 5px 5px;
     border-radius: 5px;
     border: 1px solid var(--color-lightgrey);

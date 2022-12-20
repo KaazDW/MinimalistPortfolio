@@ -18,22 +18,40 @@ console.log('Today Date : ', tday, tmonth, tyear)
 
 const date = new Date()
 
-let day = 22 - date.getDate()
-let month = date.getMonth()
-let year = date.getFullYear() - 2003
-// console.log('day : ' + day);
-// console.log('month : ' + month);
-// console.log('year : ' + year);
+let day = date.getDate()
+let month = date.getMonth() * 29
+let year = (date.getFullYear() - 2003) * 365
+console.log(day, month, year)
+var fvalue = (day + month + year) - 2
+console.log(fvalue)
 
-dayvalue = year * 365
-dayvalue = dayvalue + (month * 30)
-dayvalue = dayvalue + day - 3
+//display age values    
+document.getElementById('age').innerHTML = date.getFullYear() - 2003 + ' years'
+document.getElementById('day').innerHTML = fvalue + ' days'
 
-console.log('> Age :', year, dayvalue)
+// let day = 22 - date.getDate()
+// let month = date.getMonth()
+// let year = date.getFullYear() - 2003
+// // console.log('day : ' + day);
+// // console.log('month : ' + month);
+// // console.log('year : ' + year);
 
-//display age values
-document.getElementById('age').innerHTML = year + ' years'
-document.getElementById('day').innerHTML = dayvalue + ' days'
+// dayvalue = year * 365
+// dayvalue = dayvalue + (month * 30)
+// dayvalue = dayvalue + day - 3
+
+// console.log('> Age :', year, dayvalue)
+
+
+
+
+
+
+
+
+
+
+
 
 // CSS settings for the first open of the page
 document.getElementById('project').style.display = "none"
