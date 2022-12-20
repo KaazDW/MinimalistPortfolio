@@ -114,24 +114,23 @@ body main section#index p #age:hover ~ #day {
   opacity: 1;
   animation: openDay 0.3s;
 }
-body main section#index div {
+body main section#index div.link {
   margin-top: 35px;
   margin-bottom: 15px;
 }
-body main section#index div a {
+body main section#index div.link a {
   border: 1px solid transparent;
   transition: 0.4s;
   margin: 0 5px;
   padding: 0 10px;
-  padding-top: 55px;
 }
-body main section#index div a img {
+body main section#index div.link a img {
   border-radius: 0px;
   margin: 5px;
   height: 50px;
   width: 50px;
 }
-body main section#index div a:hover {
+body main section#index div.link a:hover {
   border-top: 1px solid var(--color-lightgrey);
   border-bottom: 1px solid var(--color-lightgrey);
   border-radius: 25px;
@@ -281,6 +280,7 @@ body main section.mobile {
     animation: openDay 0.5s;
     width: 100%;
     display: block;
+    padding-bottom: 0;
   }
   body main section#index p {
     margin: 20px auto;
@@ -290,8 +290,9 @@ body main section.mobile {
   }
   body main section#index div.link {
     width: 70vw;
-    margin: 55px auto;
-    line-height: 150px;
+    margin: 20px auto;
+    line-height: 120px;
+    margin-top: 90px;
   }
   body main section#index div.link a {
     margin: 25px;

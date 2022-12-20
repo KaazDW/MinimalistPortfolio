@@ -112,7 +112,7 @@ body{
                     animation: openDay .3s;
                 }
             }
-            div{
+            div.link{
                 margin-top: 35px;
                 margin-bottom: 15px;
                 a{
@@ -120,7 +120,6 @@ body{
                     transition: .4s;
                     margin: 0 5px;
                     padding: 0 10px;
-                    padding-top: 55px;
                     img{
                     border-radius: 0px;
                     margin: 5px;
@@ -297,6 +296,7 @@ body{
                 animation: openDay .5s;
                 width: 100%;
                 display: block;
+                padding-bottom: 0;
                 p{
                     margin: 20px auto;
                     width: 100%;
@@ -305,8 +305,9 @@ body{
                 }
                 div.link{
                     width: 70vw;
-                    margin: 55px auto;
-                    line-height: 150px;
+                    margin: 20px auto;
+                    line-height: 120px;
+                    margin-top: 90px;
                     a{
                         margin: 25px;
                     }
