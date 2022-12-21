@@ -26,6 +26,23 @@ font-family: 'Roboto', sans-serif;
     --color-grey: rgb(92, 92, 92);
     --color-lightgrey: rgb(50, 50, 50);
 }
+@keyframes parrow {
+    0%{
+        top: -40px;
+    }
+    10%{
+        top: -40px;
+    }
+    40%{
+        top: 20px;
+    }
+    70%{
+        top: 20px;
+    }
+    100%{
+        top: -40px;
+    }
+}
 body{
     background-color: var(--color-background);
     font-family: 'Poppins', sans-serif;
@@ -38,8 +55,16 @@ body{
     align-items: center;
     .ptext{
         position: absolute;
-        top: 10px;
-        left: 10px;
+        top: -40px;
+        // left: 10px;
+        margin: auto;
+        color: rgb(175, 175, 175);
+        width: 50%;
+        padding: 5px;
+        text-align: center;
+        border: 1px solid grey;
+        font-family: 'Courier New', Courier, monospace;
+        animation: parrow 7s;
     }
     main{
         border: 1px solid var(--color-lightgrey);

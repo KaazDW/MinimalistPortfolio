@@ -1,4 +1,27 @@
 
+document.addEventListener('keyup', event => {
+    if (event.code === 'Space') {
+      console.log('Right Arrow pressed')  
+    }
+})
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+       // left arrow
+        index()
+        // console.log('Left - arrow pressed')  
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+        project()
+        // console.log('Right - arrow pressed')  
+    }
+}
+
 //functions for changing display between the 2 pages
 function index(){
     document.getElementById('index').style.display = "block"
@@ -22,7 +45,7 @@ let day = date.getDate()
 let month = date.getMonth() * 29
 let year = (date.getFullYear() - 2003) * 365
 console.log(day, month, year)
-var fvalue = (day + month + year) - 2
+var fvalue = (day + month + year) - 2 
 console.log(fvalue)
 
 //display age values    
