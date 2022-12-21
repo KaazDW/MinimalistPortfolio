@@ -122,7 +122,8 @@ body main section#index div.link a {
   border: 1px solid transparent;
   transition: 0.4s;
   margin: 0 5px;
-  padding: 0 10px;
+  padding: 0px 10px;
+  padding-top: 55px;
 }
 body main section#index div.link a img {
   border-radius: 0px;
@@ -284,7 +285,7 @@ body main section.mobile {
   }
   body main section#index p {
     margin: 20px auto;
-    width: 100%;
+    width: 95%;
     text-align: center;
     white-space: break-spaces;
   }
