@@ -39,18 +39,36 @@ let tmonth = today.getMonth() + 1
 let tyear = today.getFullYear()
 console.log('Today Date : ', tday, tmonth, tyear)
 
-const date = new Date()
+// const date = new Date()
 
-let day = date.getDate()
-let month = date.getMonth() * 29
-let year = (date.getFullYear() - 2003) * 365
-console.log(day, month, year)
-var fvalue = (day + month + year) - 2 
-console.log(fvalue)
+// let day = date.getDate()
+// let month = date.getMonth() * 29
+// let year = (date.getFullYear() - 2003) * 365
+// console.log(day, month, year)
+// var fvalue = (day + month + year) - 2 
+// console.log(fvalue)
 
-//display age values    
-document.getElementById('age').innerHTML = date.getFullYear() - 2003 + ' years'
-document.getElementById('day').innerHTML = fvalue + ' days'
+// //display age values    
+// document.getElementById('age').innerHTML = date.getFullYear() - 2003 + ' years'
+// document.getElementById('day').innerHTML = fvalue + ' days'
+
+// https://stackoverflow.com/questions/7763327/how-to-calculate-date-difference-in-javascript#:~:text=Assuming%20you%20have%20two%20Date,to%20derive%20the%20other%20values.
+var date2 = new Date(tyear, tmonth, tday);
+var date1 = new Date(2003, 01, 22);
+var diff = new Date(date2.getTime() - date1.getTime());
+
+var day = diff.getUTCDate() - 1
+var month = (diff.getUTCMonth()) *30
+var year = (diff.getUTCFullYear() - 1970) *365
+
+console.log(day, month, year);
+console.log((diff.getUTCFullYear() - 1970)* 365 );
+console.log(diff.getUTCMonth() * 30);
+console.log(diff.getUTCDate() - 1);
+var t = day + month + year + 9
+console.log(t)
+document.getElementById('age').innerHTML = diff.getUTCFullYear() - 1970 + ' years'
+document.getElementById('day').innerHTML = t + ' days'
 
 // let day = 22 - date.getDate()
 // let month = date.getMonth()
