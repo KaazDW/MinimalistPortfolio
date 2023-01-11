@@ -1,4 +1,4 @@
-# Minimalist Portfolio (Content not up to date since DEC 2022)
+# Minimalist Portfolio (Content not up to date since end 2022)
 <div align=center>
 
 | **NAME** | **BUILDING DATE** | **LANGUAGES** | **LINK** |
